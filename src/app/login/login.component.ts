@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faArrowRight, } from '@fortawesome/free-solid-svg-icons';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +11,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {  }
 
   login = true;
-  faArrowRight = faArrowRight;
 
   goToRegister(): void {
     this.login = false;

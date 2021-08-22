@@ -24,7 +24,7 @@
 }
 
 .register-card{
-    height: 470px;
+    height: 480px;
     top: 50px;
 }
 
@@ -62,11 +62,18 @@
     background-color: #d3d3d3;
     color: #238626;
     border: 2px solid #238626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-button:hover{
     background-color: #238626;
     color: #FFFFFF;
+}
+
+.right-arrow{
+    margin-left: 10px;
 }
 
 .auth-separator{
@@ -92,10 +99,28 @@
     border: 2px solid #d3d3d3;
     border-radius: 5px;
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .oauth-button:hover{
     box-shadow: 2px 5px 10px #d3d3d3;
+}
+
+.gmail{
+    margin-right: 40px;
+    color: #ff0000;
+}
+
+.fb{
+    margin-right: 10px;
+    color: #0000ff
+}
+
+.gmail-text{
+    margin-right: 20px;
 }
 
 .login-or-register{
