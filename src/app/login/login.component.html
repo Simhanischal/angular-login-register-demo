@@ -1,14 +1,37 @@
 <div class="container">
 
-    <div *ngIf="login; else register" class="card login-card" id="login">
-        <form class="form">
+    <div id="login" *ngIf="login; else register" 
+         [class]="{'login-card-error': (logControl.email.touched && logControl.email.errors)
+                                    || (logControl.password.touched && logControl.password.errors), 
+                    'card': true}" >
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
             <div class="form-group">
                 <label class="label" for="email">Email</label>
-                <input class="input" type="email" placeholder="Enter your email">
+                <input
+                    formControlName="email"
+                    class="input" type="email" placeholder="Enter your email">
+                <div *ngIf="logControl.email.touched && logControl.email.errors">
+                    <div *ngIf="logControl.email.errors.required">
+                        <span class="required">Email is a required field</span>
+                    </div>
+                    <div *ngIf="logControl.email.errors.email">
+                        <span class="required">Should be a valid email address</span>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label class="label" for="username">Password</label>
-                <input class="input" type="password" placeholder="Enter password">
+                <input
+                    formControlName="password" 
+                    class="input" type="password" placeholder="Enter password">
+                <div *ngIf="logControl.password.touched && logControl.password.errors">
+                    <div *ngIf="logControl.password.errors.required">
+                        <span class="required">Email is a required field</span>
+                    </div>
+                    <div *ngIf="logControl.password.errors.minlength">
+                        <span class="required">Should be atleast 6 characters long</span>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <button class="button login-button">
@@ -37,19 +60,47 @@
     </div>
     
     <ng-template #register>
-        <div class="card register-card">
-            <form class="form">
+        <div [class]="{'register-card-error': (regControl.username.touched && regControl.username.errors)
+                                            || (regControl.email.touched && regControl.email.errors)
+                                            || (regControl.password.touched && regControl.password.errors), 
+                        'register-card': true, 'card': true}">
+            <form class="form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
                 <div class="form-group">
                     <label class="label" for="username">Username</label>
-                    <input class="input" type="text" placeholder="Enter your name">
+                    <input 
+                        formControlName="username"
+                        class="input" type="text" placeholder="Enter your name">
+                    <div *ngIf="regControl.username.touched && regControl.username.errors">
+                        <span class="required">Username is a required field</span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label class="label" for="email">Email</label>
-                    <input class="input" type="email" placeholder="Enter your email">
+                    <input 
+                        formControlName="email"
+                        class="input" type="email" placeholder="Enter your email">
+                    <div *ngIf="regControl.email.touched && regControl.email.errors">
+                        <div *ngIf="regControl.email.errors.required">
+                            <span class="required">Email is a required field</span>
+                        </div>
+                        <div *ngIf="regControl.email.errors.email">
+                            <span class="required">Should be a valid email address</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label class="label" for="username">Password</label>
-                    <input class="input" type="password" placeholder="Enter password">
+                    <input
+                        formControlName="password"
+                        class="input" type="password" placeholder="Enter password">
+                    <div *ngIf="regControl.password.touched && regControl.password.errors">
+                        <div *ngIf="regControl.password.errors.required">
+                            <span class="required">Password is a required field</span>
+                        </div>
+                        <div *ngIf="regControl.password.errors.minlength">
+                            <span class="required">Should be a atleast 6 characters long</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <button class="button login-button">

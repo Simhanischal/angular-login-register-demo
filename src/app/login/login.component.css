@@ -1,3 +1,4 @@
+
 .container{
     margin: 0;
     height: 100vh;
@@ -13,7 +14,7 @@
     padding: 10px 0;
     background-color: #FFFFFF;
     width: 350px;
-    height: 410px;
+    height: 405px;
     position: absolute;
     right: 100px;
     top: 80px;
@@ -23,9 +24,19 @@
     z-index: 100;
 }
 
+.login-card-error{
+    height: 440px;
+    top: 50px;
+}
+
 .register-card{
     height: 490px;
     top: 50px;
+}
+
+.register-card-error{
+    height: 540px;
+    top: 20px;
 }
 
 .form-group{
@@ -45,6 +56,11 @@
     border: 2px solid #d3d3d3;
     border-radius: 5px;
     padding: 10px;
+}
+
+.required{
+    color: #ff0000;
+    font-size: 13px;
 }
 
 .button{
@@ -141,9 +157,12 @@
     .card{
         width: 100vw;
         right: 0;
-        top: 25vh;
+        top: 20vh;
     }
     .register-card{
         top: 20vh;
     }
-}
+    .register-card-error{
+        top: 10vh;
+    }
+} 
