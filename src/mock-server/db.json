@@ -1,6 +1,76 @@
 {
-    "users": [
-        {"id": 1, "username": "test", "email": "test@gmail.com", "password": "testpass"},
-        {"id": 2, "username": "admin", "email": "admin@gmail.com", "password": "adminpass"}
-    ]
+  "users": [
+    {
+      "id": "1",
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "testpass"
+    },
+    {
+      "id": "2",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "adminpass"
+    },
+    {
+      "id": "ccc35a69-cf70-41d6-bba6-c477a1795f83",
+      "username": "aaa",
+      "email": "aaa@aaa.aaa",
+      "password": "aaaaaa"
+    },
+    {
+      "id": "0c34fe3b-3dfe-41a1-81f3-4f3b60d71684",
+      "username": "john",
+      "email": "johnj@gmail.com",
+      "password": "johnjjohn"
+    },
+    {
+      "id": "56afc946-9d05-4bdb-bd79-446842d00765",
+      "username": "harry",
+      "email": "harry98@gmail.com",
+      "password": "harry98"
+    },
+    {
+      "id": "4108a0bd-dca7-4eeb-a40b-9928fe38caad",
+      "username": "a",
+      "email": "aa@a.gm",
+      "password": "aaafff"
+    },
+    {
+      "id": "3ddc6647-b4e4-44bc-b6b2-c5ce22c1281f",
+      "username": "s",
+      "email": "ss@a.a",
+      "password": "aaa123"
+    },
+    {
+      "id": "db139458-b70f-4ebc-b040-ab42673b81c4",
+      "username": "qwe",
+      "email": "aa@qw.a",
+      "password": "aa23456"
+    },
+    {
+      "id": "6da315f4-e958-47c6-b18c-9eed4e577fe9",
+      "username": "Hi",
+      "email": "ahi@hi.com",
+      "password": "hihihi"
+    },
+    {
+      "id": "ab7db882-f962-4bf2-8d1d-7341aa87f9a2",
+      "username": "bye",
+      "email": "bye@bye.com",
+      "password": "baabye"
+    },
+    {
+      "id": "cd1c9e9f-89fa-4481-a42c-6115b4275d15",
+      "username": "mark",
+      "email": "markz@facebook.com",
+      "password": "markzuck"
+    },
+    {
+      "id": "ea78cf70-935c-4157-a5b5-66f0587d5aa3",
+      "username": "a",
+      "email": "aaa@aaaa.aa",
+      "password": "aa1234"
+    }
+  ]
 }

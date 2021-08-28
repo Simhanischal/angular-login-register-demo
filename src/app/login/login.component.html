@@ -26,7 +26,7 @@
                     class="input" type="password" placeholder="Enter password">
                 <div *ngIf="logControl.password.touched && logControl.password.errors">
                     <div *ngIf="logControl.password.errors.required">
-                        <span class="required">Email is a required field</span>
+                        <span class="required">Password is a required field</span>
                     </div>
                     <div *ngIf="logControl.password.errors.minlength">
                         <span class="required">Should be atleast 6 characters long</span>
@@ -43,11 +43,11 @@
                 <span>or</span>
             </div>
             <div class="oauth">
-                <button class="button oauth-button">
+                <button class="button oauth-button" (click)="googleAuth()">
                     <mat-icon class="gmail">gmail</mat-icon>
                     <span class="gmail-text">Continue with Google</span>
                 </button>
-                <button class="button oauth-button">
+                <button class="button oauth-button" (click)="fbAuth()">
                     <mat-icon class="fb">facebook</mat-icon>
                     <span class="fb-text">Continue with Facebook</span>
                 </button>
@@ -112,11 +112,11 @@
                     <span>or</span>
                 </div>
                 <div class="oauth">
-                    <button class="button oauth-button">
+                    <button class="button oauth-button" (click)="googleAuth()">
                         <mat-icon class="gmail">gmail</mat-icon>
                         <span class="gmail-text">Join with Google</span>
                     </button>
-                    <button class="button oauth-button">
+                    <button class="button oauth-button" (click)="fbAuth()">
                         <mat-icon class="fb">facebook</mat-icon>
                         <span class="fb-text">Join with Facebook</span>
                     </button>
