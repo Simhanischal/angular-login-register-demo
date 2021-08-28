@@ -102,12 +102,14 @@ export class LoginComponent implements OnInit {
     this.login = false;
   }
 
-  googleAuth(){
+  googleAuth(event: Event){
+    event.preventDefault();
     this.toastr.warning(`Sorry, Google authentication is unavaiable at the moment. 
                          Please use the above form instead`);
   }
 
-  fbAuth(){
+  fbAuth(event: Event){
+    event.preventDefault();
     this.toastr.warning(`Sorry, Facebook authentication is unavaiable at the moment. 
                          Please use the above form instead`);
   }
